@@ -1,0 +1,4 @@
+code,refactored_code,label
+"for i in range(0,len(arr)): print(arr[i])","for item in arr: print(item)","loop_optimization"
+"if x==True: print('yes')","if x: print('yes')","boolean_simplification"
+"if a!=None: print(a)","if a is not None: print(a)","python_best_practice"

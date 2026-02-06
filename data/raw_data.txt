@@ -1,0 +1,17 @@
+hi
+Hello
+Good morning
+Good evening
+How are you
+What is this project ?
+Explain this project 
+What does this application do ?
+Who developed this project ?
+How does this chatbot work?
+Help me
+i    need Help
+Thank you
+
+Thanks
+Bye
+Goodbye
