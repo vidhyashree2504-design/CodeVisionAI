@@ -7,6 +7,10 @@ from bot import get_bot_response
 app = Flask(__name__)
 CORS(app)
 
+@app.route("/")
+def home():
+    return "Automated Code Refactoring Tool Backend is Running!"
+
 @app.route("/analyze", methods=["POST"])
 def analyze():
     data = request.get_json()
