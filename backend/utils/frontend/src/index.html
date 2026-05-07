@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeVisionAI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+       <header>
+    <div class="avatar">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="AI Coding Avatar">
+    </div>
+
+    <h1>⚡ CodeVisionAI</h1>
+    <p>Automated Code Refactoring Tool</p>
+</header>
+        <section class="editor">
+            <h3>💻 Paste Your Code</h3>
+            <textarea id="user-input"></textarea>
+
+        <button id="analyzeBtn">🚀 Analyze & Refactor</button>
+
+        <section class="output">
+            <h3>🧠 AI Output</h3>
+            <pre id="output"></pre>
+        </section>
+
+        <footer>
+            <p>AI-Driven Code Refactoring Platform</p>
+        </footer>
+    </div>
+
+   <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const chatbotButton = document.getElementById("chatbot-button");
+    const chatbotPanel = document.getElementById("chatbot-panel");
+    const analyzeBtn = document.getElementById("analyzeBtn");
+
+    // Bot button click
+    chatbotButton.addEventListener("click", function () {
+      if (chatbotPanel.style.display === "flex") {
+        chatbotPanel.style.display = "none";
+      } else {
+        chatbotPanel.style.display = "flex";
+      }
+    });
+
+    // Analyze button click → auto open chatbot
+    if (analyzeBtn) {
+      analyzeBtn.addEventListener("click", function () {
+        chatbotPanel.style.display = "flex";
+      });
+    }
+  });
+</script>
+    <!-- Floating Chatbot Button -->
+<div id="chatbot-button">🤖</div>
+
+<!-- Chatbot Panel -->
+<div id="chatbot-panel">
+  <div id="chatbot-header">
+    <div style="display:flex;align-items:center;gap:8px;">
+      <div id="bot-avatar">⚡</div>
+      <span>CodeVision Bot</span>
+    </div>
+    <button onclick="toggleChatbot()">✖</button>
+  </div>
+
+  <div id="chatbot-messages">
+    <div class="bot-msg">
+      ⚡ I’m CodeVision Bot. 
+      Paste your code and I’ll  help  refactor it cleanly.
+    </div>
+    <input type="text" id="userInput">
+<button onclick="sendMessage()">Send</button>
+
+<div id="botReply"></div>
+  </div>
+</div>
+<!-- Output section ends here -->
+    </section>
+
+    <!-- JS FILE MUST BE HERE -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+
